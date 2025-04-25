@@ -11,4 +11,5 @@ RUN pip install --break-system-packages -r requirements.txt
 
 RUN python3 setup.py
 
-CMD ["python3", "App.py"]
+ADD ./docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
+RUN chmod a+x /usr/local/bin/docker_entrypoint.sh
