@@ -2,4 +2,4 @@
 
 printf "\n\n [i] Starting DeepSea dashboard ...\n\n"
 
-exec python3 App.py
+exec gunicorn -b 0.0.0.0:5000 App:app
