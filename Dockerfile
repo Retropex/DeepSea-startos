@@ -16,8 +16,3 @@ RUN python minify.py
 
 ADD ./docker_entrypoint.sh /usr/local/bin/docker_entrypoint.sh
 RUN chmod a+x /usr/local/bin/docker_entrypoint.sh
-
-ENV FLASK_ENV=production
-ENV PYTHONUNBUFFERED=1
-
-CMD ["gunicorn", "-b", "0.0.0.0:5000", "App:app"]
