@@ -3,7 +3,7 @@ FROM python:3.9.18-slim
 WORKDIR /app
 
 RUN apt-get update &&\
-    apt-get install curl -y &&\
+    apt-get install curl gcc -y &&\
     apt-get clean
 
 COPY DeepSea-Dashboard /app
