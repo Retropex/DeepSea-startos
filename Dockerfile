@@ -10,6 +10,8 @@ COPY DeepSea-Dashboard /app
 
 RUN pip install --break-system-packages -r requirements.txt
 
+RUN mkdir /root/.config
+
 RUN python setup.py
 
 RUN python minify.py
